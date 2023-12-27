@@ -5,7 +5,8 @@ from urllib import parse
 
 HEADER="""# 
 # 백준 & 프로그래머스 문제 풀이 목록
-
+[MkyuPark](https://career.programmers.co.kr/pr/innerpeace0828_8619)
+[백준 랭크](https://solved.ac/profile/m_kyu)
 프로그래머스의 경우, 푼 문제 목록에 대한 마이그레이션이 필요합니다.
 
 """
