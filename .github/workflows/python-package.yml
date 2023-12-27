@@ -6,10 +6,16 @@ on: # jobs가 실행되어야 하는 상황 정의
   push:
     branches: [ "main" ] # main 브랜치에 push가 발생했을 때
   pull_request:
+    branches: [ "main" ]
 
 jobs: # 실제 실행될 내용
   build:
     runs-on: ubuntu-latest # 빌드 환경
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10"]
+        
     steps:
     - uses: actions/checkout@v3 # checkout
     - name: Set up Python 3.10 
