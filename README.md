@@ -1,6 +1,7 @@
 # 
 # 백준 & 프로그래머스 문제 풀이 목록
-
+[백준] (https://solved.ac/profile/m_kyu)
+백준 https://solved.ac/profile/m_kyu
 프로그래머스의 경우, 푼 문제 목록에 대한 마이그레이션이 필요합니다.
 
 ## 📚 백준
