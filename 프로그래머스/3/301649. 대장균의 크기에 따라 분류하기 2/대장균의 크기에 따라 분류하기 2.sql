@@ -1,0 +1,25 @@
+-- 코드를 작성해주세요
+SELECT ID,
+CASE
+    WHEN 
+        RANK() OVER (ORDER BY SIZE_OF_COLONY DESC)
+        <= (SELECT COUNT(*) from ECOLI_DATA) /4
+    THEN "CRITICAL"
+    
+    WHEN 
+        RANK() OVER (ORDER BY SIZE_OF_COLONY DESC)
+        <= (SELECT COUNT(*) from ECOLI_DATA) /4*2
+    THEN "HIGH"
+    
+    WHEN 
+        RANK() OVER (ORDER BY SIZE_OF_COLONY DESC)
+        <= (SELECT COUNT(*) from ECOLI_DATA) /4*3
+    THEN "MEDIUM"
+    
+    WHEN 
+        RANK() OVER (ORDER BY SIZE_OF_COLONY DESC)
+        <= (SELECT COUNT(*) from ECOLI_DATA) /4*4
+    THEN "LOW"
+    END COLONY_NAME
+FROM ECOLI_DATA
+ORDER BY ID ASC;
